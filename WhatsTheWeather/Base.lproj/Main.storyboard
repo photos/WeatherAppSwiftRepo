@@ -1,25 +1,119 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="WhatsTheWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pf7IQQgbVkYLjRkDQi1hiiQTL21CixNpDLAC4iUmkDTt4y9OJRP1h1hGPn6YYd3g.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EKf-tQ-B8b">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cs-OO-x4s">
+                                <rect key="frame" x="37" y="100" width="300" height="27"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1Ol-ky-CAr"/>
+                                    <constraint firstAttribute="height" constant="27" id="geB-QT-7vs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="input your city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-Mt-c7d">
+                                <rect key="frame" x="123" y="187" width="130" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="dxU-bh-t0A"/>
+                                    <constraint firstAttribute="height" constant="21" id="k7q-Zm-sQt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" ex. Redlands" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5l8-fC-3TD" customClass="CustomTextfield" customModule="WhatsTheWeather" customModuleProvider="target">
+                                <rect key="frame" x="16" y="216" width="343" height="36"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="keo-Jf-CbH"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-e3-pTB">
+                                <rect key="frame" x="87" y="276" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AoB-h8-RxZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="BH5-cQ-rBy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="get weather">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weatherButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y3U-nD-DVI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reF-B0-aXJ">
+                                <rect key="frame" x="16" y="328" width="343" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EyM-ye-R4i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.93763573491645325" green="0.88730126973870016" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EKf-tQ-B8b" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="49i-Kf-msA"/>
+                            <constraint firstItem="5l8-fC-3TD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="8as-Cs-0sa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EKf-tQ-B8b" secondAttribute="trailing" constant="-16" id="Fvc-QB-gFr"/>
+                            <constraint firstItem="5l8-fC-3TD" firstAttribute="top" secondItem="Zen-Mt-c7d" secondAttribute="bottom" constant="8" id="Kkb-X4-QJv"/>
+                            <constraint firstItem="reF-B0-aXJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="L3r-53-YdM"/>
+                            <constraint firstAttribute="centerX" secondItem="6cs-OO-x4s" secondAttribute="centerX" id="NCB-NJ-7hT"/>
+                            <constraint firstItem="Tlg-e3-pTB" firstAttribute="top" secondItem="5l8-fC-3TD" secondAttribute="bottom" constant="24" id="NEh-6b-GXP"/>
+                            <constraint firstItem="Zen-Mt-c7d" firstAttribute="top" secondItem="6cs-OO-x4s" secondAttribute="bottom" constant="60" id="WMl-Yt-oEK"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="EKf-tQ-B8b" secondAttribute="bottom" id="ccu-lI-ETG"/>
+                            <constraint firstAttribute="centerX" secondItem="Tlg-e3-pTB" secondAttribute="centerX" id="dLL-8H-9QA"/>
+                            <constraint firstItem="reF-B0-aXJ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="eHI-qn-Spm"/>
+                            <constraint firstAttribute="centerX" secondItem="Zen-Mt-c7d" secondAttribute="centerX" id="fWb-GZ-mPx"/>
+                            <constraint firstItem="EKf-tQ-B8b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="gGN-dy-hQf"/>
+                            <constraint firstItem="6cs-OO-x4s" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="heg-1m-iBw"/>
+                            <constraint firstItem="reF-B0-aXJ" firstAttribute="top" secondItem="Tlg-e3-pTB" secondAttribute="bottom" constant="22" id="pGO-HK-V74"/>
+                            <constraint firstItem="5l8-fC-3TD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="pcA-7u-9Ru"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="weatherInfoLabel" destination="reF-B0-aXJ" id="snn-pU-tkW"/>
+                        <outlet property="weatherTextField" destination="5l8-fC-3TD" id="OhK-AM-zaQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439.5" y="388.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pf7IQQgbVkYLjRkDQi1hiiQTL21CixNpDLAC4iUmkDTt4y9OJRP1h1hGPn6YYd3g.jpg" width="640" height="1136"/>
+    </resources>
 </document>
